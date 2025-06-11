@@ -13,15 +13,10 @@ INPUT_DIR, OUTPUT_DIR = '/input', '/output'
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 
 
-def load_config() -> Dict[str, Any]:
-    """Load proof configuration from environment variables."""
-    config = {
-        'dlp_id': 1234,  # Set your own DLP ID here
-        'input_dir': INPUT_DIR,
-        'user_email': os.environ.get('USER_EMAIL', None),
+def load_config():
+    return {
+        "dlp_id": 105  # ← replace with your actual DLP_ID
     }
-    logging.info(f"Using config: {json.dumps(config, indent=2)}")
-    return config
 
 
 def run() -> None:
